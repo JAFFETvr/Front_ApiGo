@@ -1,0 +1,12 @@
+<app-user-form (userAdded)="addUser($event)"></app-user-form>
+
+<div class="user-list">
+    <app-user-card 
+    *ngFor="let user of users" 
+    [user]="user" 
+    (editUser)="editUser($event)"
+    (deleteUser)="deleteUser($event)">
+  </app-user-card>
+  
+  </div>
+  

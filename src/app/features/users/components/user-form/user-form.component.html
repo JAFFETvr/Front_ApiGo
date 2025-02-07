@@ -1,0 +1,6 @@
+<form [formGroup]="userForm" (ngSubmit)="addUser()">
+    <input formControlName="name" placeholder="Nombre" required />
+    <input formControlName="direccion" placeholder="Dirección" required />
+    <button type="submit">Agregar Usuario</button>
+  </form>
+  

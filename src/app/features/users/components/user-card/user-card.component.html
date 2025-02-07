@@ -1,0 +1,24 @@
+<div class="user-card">
+    <h3>{{ user.Name }}</h3>
+    <p>{{ user.Direccion }}</p>
+    <button (click)="openEditModal()">Editar</button>
+    <button (click)="onDelete()">Eliminar</button>
+  </div>
+  
+  <!-- Modal de Edición -->
+  <div *ngIf="isEditModalOpen" class="modal-overlay">
+    <div class="modal">
+      <span class="close" (click)="closeEditModal()">&times;</span>
+      <h2>Editar Usuario</h2>
+  
+      <label>Nombre:</label>
+      <input [(ngModel)]="editedUser.Name" type="text" />
+  
+      <label>Dirección:</label>
+      <input [(ngModel)]="editedUser.Direccion" type="text" />
+  
+      <button (click)="saveEdit()">Guardar</button>
+      <button (click)="closeEditModal()">Cancelar</button>
+    </div>
+  </div>
+  
