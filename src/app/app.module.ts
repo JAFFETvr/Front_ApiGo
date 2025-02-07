@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { UsersModule } from './features/users/users.module';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ProductModule } from './features/product/product.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BrowserModule,
     AppRoutingModule,
     UsersModule,
-    HttpClientModule
-  ],
+    ProductModule,
+    HttpClientModule,
+    
+      ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync()

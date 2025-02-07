@@ -1,0 +1,25 @@
+<div class="product-card">
+    <h3>{{ product.Name }}</h3>
+    <p>Precio: {{ product.Price | currency }}</p>
+    <button (click)="openEditModal()">Editar</button>
+    <button (click)="onDelete()">Eliminar</button>
+  </div>
+  
+  
+  <!-- Modal de Edición -->
+  <div *ngIf="isEditModalOpen" class="modal-overlay">
+    <div class="modal">
+      <span class="close" (click)="closeEditModal()">&times;</span>
+      <h2>Editar Producto</h2>
+  
+      <label>Nombre:</label>
+      <input [(ngModel)]="editedProduct.Name" type="text" />
+  
+      <label>Precio:</label>
+      <input [(ngModel)]="editedProduct.Price" type="number" />
+  
+      <button (click)="saveEdit()">Guardar</button>
+      <button (click)="closeEditModal()">Cancelar</button>
+    </div>
+  </div>
+  

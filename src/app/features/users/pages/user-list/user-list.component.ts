@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../interface/users';
 import { UserService } from '../../services/user.service';
+import { User } from '../../interface/users';
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -32,14 +33,18 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  editUser(user: User) {
-    console.log('Editar usuario:', user);
-    // Aquí puedes abrir un formulario o realizar otra acción para editar
+  editUser(updatedUser: User) {
+    this.userService.updateUser(updatedUser).subscribe(() => {
+      const index = this.users.findIndex(user => user.Id === updatedUser.Id);
+      if (index !== -1) {
+        this.users[index] = updatedUser;
+      }
+    });
   }
 
   deleteUser(id: number) {
     this.userService.deleteUser(id).subscribe(() => {
-      this.users = this.users.filter(user => user.id !== id);
+      this.users = this.users.filter(user => user.Id !== id);
     });
   }
 }

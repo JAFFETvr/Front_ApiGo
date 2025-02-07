@@ -7,14 +7,17 @@ import { User } from '../../interface/users';
 })
 export class UserCardComponent {
   @Input() user!: User;
-  @Output() editUser = new EventEmitter<User>(); // Para emitir cambios
-  @Output() deleteUser = new EventEmitter<number>(); // Para eliminar
+  @Output() editUser = new EventEmitter<User>();
+  @Output() deleteUser = new EventEmitter<number>();
 
   isEditModalOpen = false;
   editedUser!: User;
 
+  ngOnInit() {
+    this.editedUser = { ...this.user };
+  }
+
   openEditModal() {
-    this.editedUser = { ...this.user }; // Clonar el usuario
     this.isEditModalOpen = true;
   }
 
@@ -23,11 +26,15 @@ export class UserCardComponent {
   }
 
   saveEdit() {
-    this.editUser.emit(this.editedUser); // Emitir cambios
-    this.isEditModalOpen = false;
+    this.editUser.emit(this.editedUser);
+    this.closeEditModal();
   }
 
   onDelete() {
-    this.deleteUser.emit(this.user.id);
+    if (!this.user.Id) {
+      console.error('El usuario no tiene un ID válido:', this.user);
+      return;
+    }
+    this.deleteUser.emit(this.user.Id);
   }
 }
