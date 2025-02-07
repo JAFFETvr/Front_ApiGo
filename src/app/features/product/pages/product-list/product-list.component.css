@@ -3,7 +3,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: #60756ea1;
+    background-color: #f4f7f6; 
     border-radius: 8px;
   }
   
