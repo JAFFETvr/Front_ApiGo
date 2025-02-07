@@ -1,0 +1,119 @@
+/* Contenedor principal de la lista de usuarios */
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f7f6; /* Fondo gris suave */
+    border-radius: 8px;
+  }
+  
+  /* Estilo para cada tarjeta de usuario */
+  .user-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto de hover en la tarjeta */
+  .user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título de la tarjeta (nombre del usuario) */
+  .user-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Información de la dirección del usuario */
+  .user-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de los botones de editar y eliminar */
+  .user-card button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover sobre los botones */
+  .user-card button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Desaparecer el outline al hacer foco en el botón */
+  .user-card button:focus {
+    outline: none;
+  }
+  
+  /* Estilo para el modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .modal label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+  
+  .modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal button {
+    margin-right: 10px;
+    background-color: #2ecc71;
+  }
+  
+  .modal button:last-child {
+    background-color: #e74c3c;
+  }
+  
+  /* Estilo para el contenedor #product */
+  #product {
+    text-align: center;
+  }
+  
+  #clientes{
+    text-align: center;
+  }
