@@ -10,7 +10,7 @@ import { User } from '../../interface/users';
 })
 export class UserFormComponent {
   userForm: FormGroup;
-  @Output() userAdded = new EventEmitter<User>(); // Para notificar cuando se agregue un usuario
+  @Output() userAdded = new EventEmitter<User>(); 
 
   constructor(private fb: FormBuilder, private userService: UserService) {
     this.userForm = this.fb.group({
@@ -23,7 +23,7 @@ export class UserFormComponent {
     if (this.userForm.valid) {
       const newUser: User = this.userForm.value;
       this.userService.addUser(newUser).subscribe((user) => {
-        this.userAdded.emit(user); // Emitir el usuario agregado
+        this.userAdded.emit(user); 
         this.userForm.reset();
       });
     }

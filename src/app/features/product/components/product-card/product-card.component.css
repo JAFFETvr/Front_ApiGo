@@ -90,11 +90,15 @@
   }
   
   .modal button {
-    margin-right: 10px;
-    background-color: #2ecc71;
+    margin-right: 40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #5f6660;
+    color: white;
   }
   
   .modal button:last-child {
-    background-color: #e74c3c;
+    background-color: #5f6660;
   }
   

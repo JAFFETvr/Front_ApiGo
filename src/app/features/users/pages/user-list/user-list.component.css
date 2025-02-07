@@ -1,14 +1,12 @@
-/* Contenedor principal de la lista de usuarios */
 .user-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: #f4f7f6; /* Fondo gris suave */
+    background-color: #f4f7f6; 
     border-radius: 8px;
   }
   
-  /* Estilo para cada tarjeta de usuario */
   .user-card {
     background-color: #fff;
     padding: 20px;
@@ -17,27 +15,23 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Efecto de hover en la tarjeta */
   .user-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
   
-  /* Título de la tarjeta (nombre del usuario) */
   .user-card h3 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
   }
   
-  /* Información de la dirección del usuario */
   .user-card p {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 20px;
   }
   
-  /* Estilo de los botones de editar y eliminar */
   .user-card button {
     background-color: #3498db;
     color: #fff;
@@ -49,17 +43,14 @@
     transition: background-color 0.3s;
   }
   
-  /* Hover sobre los botones */
   .user-card button:hover {
     background-color: #2980b9;
   }
   
-  /* Desaparecer el outline al hacer foco en el botón */
   .user-card button:focus {
     outline: none;
   }
   
-  /* Estilo para el modal */
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -109,7 +100,6 @@
     background-color: #e74c3c;
   }
   
-  /* Estilo para el contenedor #product */
   #product {
     text-align: center;
   }

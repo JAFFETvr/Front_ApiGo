@@ -38,29 +38,24 @@ form {
     transition: background-color 0.3s ease;
   }
   
-  /* Efecto hover en el botón */
   button:hover {
     background-color: #5f6660b9;
   }
   
-  /* Enfoque del botón */
   button:focus {
     outline: none;
   }
   
-  /* Efecto de borde cuando el input está enfocado */
   input:focus {
     border-color: #3498db;
     outline: none;
   }
   
-  /* Estilo para el formulario con un máximo de 500px de ancho y centrado */
   .user-form {
     max-width: 500px;
     margin: 0 auto;
   }
   
-  /* Responsive: Aseguramos que en pantallas más pequeñas los inputs se ajusten */
   @media (max-width: 600px) {
     form {
       padding: 15px;
